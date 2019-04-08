@@ -1,0 +1,127 @@
+body
+{ 
+	
+} 
+
+div.adminBackground
+{
+	
+	background-color: #FFFF99;
+}
+
+
+div.mainDiv
+{
+	background-color: #FFFFCC;
+	border: solid 1px black;
+	width: 70%;
+	margins: auto;
+	positions:relative;
+}
+
+
+
+div.paddingDiv
+{
+	margin-top: 10px;
+	margin-left: 15px;
+}
+
+
+div.ticketConfigDiv
+{
+	background-color: #F5F5DC;
+	width: 70%;
+}
+
+
+
+input.formButton
+{
+	background-color: #6699FF;
+}
+
+input.highlightedFormButton
+{
+	background-color: #FF7F50;
+	color: black;
+}
+
+
+
+input.helpButton
+{
+	background-color: red;
+}
+
+
+
+
+div.errorMessage
+{
+	color: #FF0000;
+}
+
+
+div.viewOrder
+{
+	background-color: #CCFFFF;
+	color: #480000;
+}
+
+
+div.paymentMethod
+{
+	background-color: #CCFF99; 
+    color: #000000;
+}
+
+
+
+div.highlightTitle
+{
+	color: FF00CC;
+}
+
+
+
+div.notification
+{
+	color: #336600;
+}
+
+
+div.output
+{
+	background-color: #FFFFCC;
+	color: #7D1B7E;
+}
+
+
+
+
+
+div.shoppingBasketOwner
+{
+	color: #3300CC;
+
+}
+
+
+div.routeFinderOwner
+{
+	color: #660066;
+
+}
+
+td.tableTitle
+{
+	color: #009900;
+
+}
+
+td.tableContents
+{
+	color: #0000FF;
+
+}

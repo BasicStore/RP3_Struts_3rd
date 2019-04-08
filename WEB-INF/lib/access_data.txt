@@ -1,0 +1,6 @@
+jdbc_driver_type=jdbc:oracle:thin:
+host=oracle.fdmgroup.com
+port=1521
+databaseName=campus
+userId=paulbickell
+passwd=pb12vlS3

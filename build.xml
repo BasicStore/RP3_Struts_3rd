@@ -1,0 +1,62 @@
+
+<project name="RoutePlannerMVC_phase3" basedir="." default="deploy">
+	
+	<property name="rp3" value="RoutePlannerMVC_phase3_struts" />
+	<property name="tomcat" value="C:\Bickell-Tomcat\apache-tomcat-6.0.18" />
+	<property name="tomcat_webapps" value="C:\Bickell-Tomcat\apache-tomcat-6.0.18\webapps" />		
+	<property name="local_war" value="H:\Workspace1\RoutePlannerMVC_phase3_struts\RoutePlannerMVC_phase3_struts.war" />
+	
+	
+	
+	<target name="remove">
+		<delete file="${tomcat_webapps}\${rp3}.war" />
+		<delete dir="${tomcat_webapps}\${rp3}" />
+	</target>
+	
+	
+	
+	
+	
+	<target name="create_war" depends="remove">
+		<war destfile="${rp3}.war" webxml="WEB-INF/web.xml">
+			<classes dir="src" />
+			<fileset dir=".">
+				<exclude name="WEB-INF/web.xml" />
+			</fileset>
+		</war>
+	</target>
+		
+
+	
+	
+	
+	<target name="copy_to_tomcat" depends="create_war">
+		<mkdir dir="${tomcat_webapps}/${rp3}"/>
+		<copy todir="${tomcat_webapps}/${rp3}" overwrite="true">
+			<fileset dir=".">
+				<include name="*.war" />
+			</fileset>
+		</copy>
+	</target>
+	
+
+	
+
+	<target name="unzip" depends="copy_to_tomcat">
+		<unwar src="${tomcat_webapps}/${rp3}/${rp3}.war" dest="${tomcat_webapps}/${rp3}" />
+	</target>
+
+
+	
+	<target name="delete_war" depends="unzip" >
+		<delete file="${local_war}" />
+	</target>
+
+
+	
+	<target name="deploy" depends="delete_war" />
+
+	
+	
+	
+</project>
